@@ -38,7 +38,8 @@ const Presentation = () => {
                     variants={Animations.bottomToTop({ duration: 1.1 })}
 
                     className='text-lg'>Salut, moi c’est Emanuel Djatika alias <span className='font-bold'>ZashCode</span> .
-                    Un créateur, un passionné, <span className='font-black'>un trouveur de solutions.</span> Bienvenue dans mon univers.</motion.p>
+                    <span className='font-black'>Un trouveur de solutions, </span>
+                    un créateur, un passionné,  Bienvenue dans mon univers.</motion.p>
                     <div className="my-6 flex gap-2">
                     {socials.map((element, index) => (
                         <motion.a

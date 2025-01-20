@@ -37,8 +37,8 @@ const Presentation = () => {
                 <motion.p
                     variants={Animations.bottomToTop({ duration: 1.1 })}
 
-                    className='text-lg'>Salut, moi c’est Emanuel Djatika.
-                    Un créateur, un passionné, un trouveur de solutions. Bienvenue dans mon univers.</motion.p>
+                    className='text-lg'>Salut, moi c’est Emanuel Djatika alias <span className='font-bold'>ZashCode</span> .
+                    Un créateur, un passionné, <span className='font-black'>un trouveur de solutions.</span> Bienvenue dans mon univers.</motion.p>
                 <div className="my-6 flex gap-2">
                     {socials.map((element, index) => (
                         <motion.a
@@ -54,7 +54,7 @@ const Presentation = () => {
                 </div>
                 <motion.a href='/contact'
                     variants={Animations.bottomToTop({ duration: 1.7 })}
-                    className=' bg-white font-bold font-openSans text-black hover:text-white rounded-full px-12 py-3 md:py-3 border-2 border-white hover:bg-transparent w-56 text-center'>
+                    className=' bg-white font-bold font-openSans text-morange hover:text-white rounded-full px-3 py-3 md:py-3 border-2 border-white hover:bg-transparent w-48 text-center'>
                  Me contacter
                 </motion.a>
             </motion.div>

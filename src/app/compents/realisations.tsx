@@ -6,8 +6,8 @@ const Realisations = () => {
     const projets = [
         { image: "cemena.png", link: "https://www.cemena-togo.com/", title: "Des solutions naturelles pour votre Santé", type: "Site web" },
         { image: "eboite.png", link: "https://eboite.co/", title: "La BAN (Boîte à Avis Numérique) est une plateforme moderne", type: "Site web" },
-        { image: "orphelinat.png", link: "https://yendoube.vercel.app/", title: "Création de site de soutien aux démunis", type: "Site web" },
-    { image: "moger.png", link: "", title: "Conception d'une application immobilière", type: "Application mobile" }
+        { image: "orphelinat.png", link: "https://yendoube.vercel.app/", title: "Soutenir Un Démuni Pour un monde meilleur", type: "Site web" },
+        { image: "moger.png", link: "https://play.google.com/store/apps/details?id=com.equilibre.moger", title: "Simplement, Rapidement, Un bien immobilier pour tous", type: "Application mobile" }
     ]
     return (
         <div className='max w-full '>

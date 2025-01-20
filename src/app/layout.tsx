@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "sozisoft",
+  title: "Manu",
   description: "Entreprise de création de solution numérique",
 };
 
@@ -49,7 +49,7 @@ export default function RootLayout({
 
             <div>
               <img src="/logo.png" alt="" className="w-12" />
-              <p className="w-80 mt-6">Chez sozisoft, des solutions web et mobiles sur mesure pour donner vie à vos projets avec efficacité et innovation.</p>
+              <p className="w-80 mt-6">Chez ZashCode, des solutions web et mobiles sur mesure pour donner vie à vos projets avec efficacité et innovation.</p>
               <div className="my-6 flex gap-2">
                 {socials.map((element) => (
                   <div key={element.icon} className="bg-white h-14 w-14 rounded-lg flex flex-col items-center justify-center">
@@ -68,7 +68,7 @@ export default function RootLayout({
               </div>
               <div className="flex items-center">
                 <img src="/icons/mail.png" alt="" className="h-6 " />
-                <p className="p-3">sozisoft@gmail.com</p>
+                <p className="p-3">em.djatika@gmail.com</p>
               </div>
               <div className="flex items-center">
                 <img src="/icons/map.png" alt="" className="h-6 mx-1 " />

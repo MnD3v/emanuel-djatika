@@ -2,7 +2,7 @@
 class Animations {
 
     static leftToRight({ duration, direction, delay, inverse }: {
-        duration: any, direction?: any, delay?: any, inverse?: any
+        duration: number, direction?: number, delay?: number, inverse?: boolean
     }) {
         return ({
             hidden: { opacity: 0, x: inverse == true ? 120 : -120, },
@@ -19,7 +19,7 @@ class Animations {
         });
     };
 
-    static bottomToTop({ duration, inverse, delay }: { duration: any, inverse?: boolean, delay?: any, }) {
+    static bottomToTop({ duration, inverse, delay }: { duration: number, inverse?: boolean, delay?: number, }) {
 
 
         return ({
@@ -36,7 +36,7 @@ class Animations {
             },
         });
     };
-    static opacity({ duration, delay }: { duration: any, delay?: any, }) {
+    static opacity({ duration, delay }: { duration: number, delay?: number, }) {
 
         return ({
             hidden: { opacity: 0, },
@@ -53,7 +53,7 @@ class Animations {
         });
     };
 
-    static scale({ duration, delay }: { duration: any, delay?: any }) {
+    static scale({ duration, delay }: { duration: number, delay?: number }) {
 
         return ({
             hidden: { opacity: 0, scale: 0, },

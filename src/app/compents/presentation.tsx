@@ -42,9 +42,10 @@ const Presentation = () => {
                 <div className="my-6 flex gap-2">
                     {socials.map((element, index) => (
                         <motion.a
+                        key={element.icon}
                         variants={Animations.leftToRight({ duration: 0.3*index , inverse: true})}
                         href={element.link} target='_blank'>
-                            <div key={element.icon} className="bg-white hover:bg-morange h-14 w-14 rounded-full flex flex-col items-center justify-center">
+                            <div className="bg-white hover:bg-morange h-14 w-14 rounded-full flex flex-col items-center justify-center">
                                 <img
                                     src={`/icons/${element.icon}`} alt="" className="h-6" />
                             </div>

@@ -24,10 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const socials = [{ icon: "facebook.png", link: "" },
-  { icon: "linkedin.png", link: "" },
-  { icon: "twitter.png", link: "" },
-  { icon: "youtube.png", link: "" },
+  const socials = [{ icon: "facebook.png", link: "https://web.facebook.com/emanuel.djatika.7?locale=fr_FR" },
+    { icon: "linkedin.png", link: "https://www.linkedin.com/in/emanuel-djatika-283390276/" },
+    { icon: "github.png", link: "https://github.com/em-djatika" },
+
+    
 
   ]
   return (
@@ -51,12 +52,18 @@ export default function RootLayout({
               <img src="/logo.png" alt="" className="w-12" />
               <p className="w-80 mt-6">Chez ZashCode, des solutions web et mobiles sur mesure pour donner vie à vos projets avec efficacité et innovation.</p>
               <div className="my-6 flex gap-2">
-                {socials.map((element) => (
-                  <div key={element.icon} className="bg-white h-14 w-14 rounded-lg flex flex-col items-center justify-center">
-                    <img src={`/icons/${element.icon}`} alt="" className="h-6" />
-                  </div>
-                ))}
-              </div>
+                    {socials.map((element, index) => (
+                        <a
+                        key={element.icon}
+                  
+                        href={element.link} target='_blank'>
+                            <div className="bg-white hover:bg-morange h-14 w-14 rounded-full flex flex-col items-center justify-center">
+                                <img
+                                    src={`/icons/${element.icon}`} alt="" className="h-6" />
+                            </div>
+                        </a>
+                    ))}
+                </div>
             </div>
             <div className="pt-6 w-80">
               <h3>

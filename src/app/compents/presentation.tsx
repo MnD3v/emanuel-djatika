@@ -39,7 +39,19 @@ const Presentation = () => {
 
                     className='text-lg'>Salut, moi c’est Emanuel Djatika alias <span className='font-bold'>ZashCode</span> .
                     Un créateur, un passionné, <span className='font-black'>un trouveur de solutions.</span> Bienvenue dans mon univers.</motion.p>
-                <div className="my-6 flex gap-2">
+                    <div className="my-6 flex gap-2">
+                    {socials.map((element, index) => (
+                        <motion.a
+                        key={element.icon}
+                        variants={Animations.leftToRight({ duration: 0.3*index , inverse: true})}
+                        href={element.link} target='_blank'>
+                            <div className="bg-white hover:bg-morange h-14 w-14 rounded-full flex flex-col items-center justify-center">
+                                <img
+                                    src={`/icons/${element.icon}`} alt="" className="h-6" />
+                            </div>
+                        </motion.a>
+                    ))}
+                </div>      <div className="my-6 flex gap-2">
                     {socials.map((element, index) => (
                         <motion.a
                         key={element.icon}

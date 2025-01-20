@@ -84,7 +84,7 @@ export default function RootLayout({
             </div>
             <div className="pt-6 w-80">
               <h3>Newletter</h3>
-              <p className="my-3">Recevez les notifications concernant l'evolution de nos service et de nos articles</p>
+              <p className="my-3">Recevez les notifications concernant l'evolution de mes services et de mes articles</p>
               <input type="email" placeholder="Entrez votre mail" className="w-full bg-transparent border border-white/20 rounded-xl p-3" />
               <button className="bg-morange w-full py-3 my-4 rounded-xl uppercase">S'abonner</button>
             </div>

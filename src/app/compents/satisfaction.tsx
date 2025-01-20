@@ -21,7 +21,7 @@ const Satisfaction = () => {
                     <motion.p
                         variants={Animations.bottomToTop({ duration: 1.1 })}
 
-                    >Nos clients sont pleinement satisfaits de notre expertise et de notre engagement. J'offre des solutions personnalisées, réactives et orientées vers des résultats qui dépassent les attentes."</motion.p>
+                    >Mes clients sont pleinement satisfaits de notre expertise et de notre engagement. J'offre des solutions personnalisées, réactives et orientées vers des résultats qui dépassent les attentes."</motion.p>
                     <motion.a
                         href='/contact'
                         variants={Animations.bottomToTop({ duration: 1.6 })}

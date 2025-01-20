@@ -9,8 +9,8 @@ const Services = () => {
 
     const services = [{ icon: "website.png", titre: "Application Web", description: "Je conçois des applications web modernes et performantes, adaptées à vos besoins pour propulser votre entreprise dans l'ère numérique." },
     { icon: "mobile.png", titre: "Applications Android & iOS", description: "Je développe des applications mobiles intuitives et fonctionnelles pour Android et iOS, optimisées pour offrir la meilleure expérience utilisateur." },
-    { icon: "design.png", titre: "UI & UX Design", description: "Nos experts en design UI/UX créent des interfaces captivantes qui allient esthétisme et facilité d’utilisation, pour une expérience utilisateur optimale." },
-    { icon: "internet.png", titre: "SEO Marketing", description: "Boostez votre visibilité en ligne grâce à nos stratégies de marketing SEO qui augmentent votre présence sur les moteurs de recherche et attirent plus de clients." },
+    { icon: "design.png", titre: "UI & UX Design", description: "Je crée des interfaces captivantes qui allient esthétisme et facilité d’utilisation, pour une expérience utilisateur optimale." },
+    { icon: "internet.png", titre: "SEO Marketing", description: "Boostez votre visibilité en ligne grâce à mes stratégies de marketing SEO qui augmentent votre présence sur les moteurs de recherche et attirent plus de clients." },
         // { icon: "powerpoint.png", titre: "Conception de Powerpoints Professionels", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempore provident alias quas repellat nisi odio aspernatur iste laudantium voluptatibus, labore libero similique enim beatae natus, amet ullam non fugit." }
     ]
     return (

@@ -52,19 +52,7 @@ const Presentation = () => {
                             </div>
                         </motion.a>
                     ))}
-                </div>      <div className="my-6 flex gap-2">
-                    {socials.map((element, index) => (
-                        <motion.a
-                        key={element.icon}
-                        variants={Animations.leftToRight({ duration: 0.3*index , inverse: true})}
-                        href={element.link} target='_blank'>
-                            <div className="bg-white hover:bg-morange h-14 w-14 rounded-full flex flex-col items-center justify-center">
-                                <img
-                                    src={`/icons/${element.icon}`} alt="" className="h-6" />
-                            </div>
-                        </motion.a>
-                    ))}
-                </div>
+                </div>    
                 <motion.a href='/contact'
                     variants={Animations.bottomToTop({ duration: 1.7 })}
                     className=' bg-white font-bold font-openSans text-morange hover:text-white rounded-full px-3 py-3 md:py-3 border-2 border-white hover:bg-transparent w-48 text-center'>

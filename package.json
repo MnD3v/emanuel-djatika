@@ -9,17 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.8",
+    "next-sanity": "^9.12.0",
+    "react": "^18",
+    "react-dom": "^18",
     "@next/font": "^14.2.15",
     "@portabletext/react": "^3.2.1",
     "@sanity/image-url": "^1.1.0",
     "framer-motion": "^11.5.4",
-    "lucide-react": "^0.525.0",
-    "next": "14.2.8",
-    "next-sanity": "^9.12.0",
-    "react": "^18",
-    "react-dom": "^18"
+    "lucide-react": "^0.525.0"
+
   },
+
   "devDependencies": {
+    "next": "14.2.8",
     "@types/node": "^20",
     "@types/react": "18.3.18",
     "@types/react-dom": "^18",

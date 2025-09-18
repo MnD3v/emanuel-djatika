@@ -9,11 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily:{
+        sans: ["var(--font-plus-jakarta-sans)", "var(--font-dm-sans)", "Poppins", "sans-serif"],
         poppins: "Poppins",
         playFaire: "Playfair Display",
         roboto: "Roboto Slab",
         openSans: "Open Sans",
-        basker: "Libre Baskerville"
+        basker: "Libre Baskerville",
+        jakarta: "var(--font-plus-jakarta-sans)",
+        dm: "var(--font-dm-sans)"
       },
       colors: {
         morange: "#F95D51",

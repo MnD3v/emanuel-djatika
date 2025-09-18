@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
 :root {
   --background: #ffffff;
@@ -25,7 +24,12 @@ html {
 }
 
 body {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+}
+
+/* DM Sans as default font for all text elements */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
+  font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -39,8 +43,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Poppins";
-
+  font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: larger;
 }
@@ -90,5 +93,32 @@ h3 {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Font alternance styles */
+  .font-display {
+    font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+  }
+  
+  .font-body {
+    font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+  }
+  
+  /* Typography hierarchy with DM Sans as primary */
+  .heading-primary {
+    font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-secondary {
+    font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-accent {
+    font-family: var(--font-dm-sans), var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+    font-weight: 500;
   }
 }

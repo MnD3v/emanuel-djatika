@@ -1,5 +1,4 @@
 "use client"
-import FixedAppBar from '@/app/compents/fixed_app_bar'
 import React from 'react'
 
 const Article = () => {
@@ -8,7 +7,6 @@ const Article = () => {
 
 
             <div className='flex justify-center mx-3  text-zinc-600 font-basker text-base md:text-lg'>
-                <FixedAppBar fixed={true}></FixedAppBar>
 
                 <div className='max-w-[800px] border p-1 md:p-9 my-20 md:my-32'>
                     <img src="/articles_images/website.jpg" alt="" className='w-full object-cover' />

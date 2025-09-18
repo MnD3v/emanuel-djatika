@@ -1,16 +1,15 @@
 "use client"
 import Services from "./compents/services";
 import About from "./compents/garantis";
-import Blog from "./compents/blog";
-import AppBar from "./compents/app_bar";
 import Presentation from "./compents/presentation";
 import Dispo from "./compents/dispo";
-import Technologies from "./compents/technologies";
-import Satisfaction from "./compents/satisfaction";
+import Tarif from "./compents/tarif";
 import Realisations from "./compents/realisations";
+import Formation from "./compents/formation";
 import FixedAppBar from "./compents/fixed_app_bar";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Blog from "./blog/page";
 
 export default function Home() {
   const [isInView, setIsInView] = useState(true);
@@ -25,41 +24,25 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+            <div className=" relative">
+                <div className="absolute inset-0"></div>
       {
-        isInView && <div className='fixed flex flex-col items-center justify-center bg-blue-950 h-full w-full'>
+        isInView && <div className='fixed flex flex-col items-center justify-center bg-[linear-gradient(225deg,_rgba(6,182,212,0.9),_rgba(139,92,246,0.9)_50%,_rgba(236,72,153,0.9))] h-full w-full z-50'>
           <div className='loader'></div>
         </div>}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className=" w-full flex flex-col items-center max-sm:text-sm">
-        <FixedAppBar></FixedAppBar>
-        <div className="relative flex flex-col items-center text-white w-full bg-morange overflow-hidden">
-          <div className='absolute -rotate-45 h-full w-80 bg-gradient-to-l from-black/10 to-transparent pointer-events-none rounded-full z-10'></div>
+        className="w-full flex flex-col items-center max-sm:text-sm relative z-10">
+        <FixedAppBar fixed={true}></FixedAppBar>
+        <Presentation></Presentation>
 
-          <div className='absolute -top-[500px] -left-0 h-[1200px] w-[200px] md:w-[400px]  rotate-45 bg-gradient-to-b from-white/20 to-transparent pointer-events-none z-10'></div>
+        <Services></Services>
 
-          <AppBar fixed={false} logo={"/logo.png"} menuIcon="/icons/white-menu.png" ></AppBar>
-          <Presentation></Presentation>
-        </div>
-
-        <div className="bg-[#541FA3] w-full text-white">
-          <div className="absolute h-96 w-96 rounded-full -left-40 bg-white/5 z-0">
-
-          </div>
-          <div className="relative z-30">
-            <Services></Services>
-
-          </div>
-        </div>
-
-        <div className="bg-zinc-200 w-full flex justify-center">
-          <About></About>
-        </div>
-        <Satisfaction></Satisfaction>
+        <About></About>
+        <Tarif></Tarif>
+        <Formation></Formation>
         <Dispo></Dispo>
-        <Technologies></Technologies>
         <Realisations></Realisations>
         <Blog></Blog>
         {/* <Temoignages></Temoignages> */}

@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0d1117;
+  /* Deep dark navy/black similar to GitHub dark or Ted Goas */
+  --foreground: #e6edf3;
+  /* Off-white */
+  --primary: #58a6ff;
+  /* Base blue */
+  --neon-blue: #2f81f7;
+  --neon-orange: #f0883e;
+  --neon-green: #3fb950;
+  --neon-purple: #8957e5;
+  --sketchy-white: rgba(255, 255, 255, 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+  antialiased: subpixel-antialiased;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sora), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.font-handwritten {
+  font-family: var(--font-caveat), cursive;
+}
+
+/* Sketchy Border Utility */
+.sketchy-box {
+  border: 2px solid var(--sketchy-white);
+  border-radius: 2px 255px 3px 25px / 255px 6px 225px 20px;
+  /* Irregular shape */
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.sketchy-box:hover {
+  border-color: var(--foreground);
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.1);
+}
+
+.sketchy-box-blue {
+  border-color: var(--neon-blue);
+}
+
+.sketchy-box-orange {
+  border-color: var(--neon-orange);
+}
+
+.sketchy-box-green {
+  border-color: var(--neon-green);
+}
+
+/* Highlight Link */
+.highlight-link {
+  color: var(--foreground);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+  transition: all 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.highlight-link:hover {
+  background-color: var(--primary);
+  color: #000;
+  border-bottom-color: transparent;
+}
+
+/* Specific Ted Goas style headings */
+.section-label {
+  font-family: monospace;
+  /* Or a handwritten font if available */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.text-neon-blue {
+  color: var(--neon-blue);
+}
+
+.text-neon-orange {
+  color: var(--neon-orange);
+}
+
+.text-neon-green {
+  color: var(--neon-green);
+}
+
+/* Background Doodle (Abstract lines) */
+.bg-doodle {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 C 20 20, 40 20, 50 10' stroke='%23ffffff10' fill='none'/%3E%3C/svg%3E");
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

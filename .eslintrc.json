@@ -1,0 +1,10 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off", // Désactiver la règle pour TypeScript
+    // Si nécessaire, désactiver l'avertissement pour l'élément <img> :
+    "@next/next/no-img-element": "off"
+  }
+}

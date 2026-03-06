@@ -3,22 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --background: #0d1117;
-  /* Deep dark navy/black similar to GitHub dark or Ted Goas */
-  --foreground: #e6edf3;
-  /* Off-white */
-  --primary: #58a6ff;
-  /* Base blue */
-  --neon-blue: #2f81f7;
-  --neon-orange: #f0883e;
-  --neon-green: #3fb950;
-  --neon-purple: #8957e5;
-  --sketchy-white: rgba(255, 255, 255, 0.7);
+  --background: #09090b;
+  --foreground: #fafafa;
+  --primary: #3b82f6;
+  --sketchy-white: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 html {
   scroll-behavior: smooth;
-  antialiased: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -39,78 +34,43 @@ h6 {
   letter-spacing: -0.02em;
 }
 
-.font-handwritten {
-  font-family: var(--font-caveat), cursive;
-}
-
-/* Sketchy Border Utility */
-.sketchy-box {
-  border: 2px solid var(--sketchy-white);
-  border-radius: 2px 255px 3px 25px / 255px 6px 225px 20px;
-  /* Irregular shape */
-  background: transparent;
+/* Elegant cards */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.sketchy-box:hover {
-  border-color: var(--foreground);
-  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.1);
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.sketchy-box-blue {
-  border-color: var(--neon-blue);
-}
-
-.sketchy-box-orange {
-  border-color: var(--neon-orange);
-}
-
-.sketchy-box-green {
-  border-color: var(--neon-green);
-}
-
-/* Highlight Link */
-.highlight-link {
-  color: var(--foreground);
+a {
+  color: var(--primary);
   text-decoration: none;
-  border-bottom: 2px solid var(--primary);
-  transition: all 0.2s ease;
-  padding-bottom: 1px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.highlight-link:hover {
-  background-color: var(--primary);
-  color: #000;
-  border-bottom-color: transparent;
+a:hover {
+  color: var(--foreground);
 }
 
-/* Specific Ted Goas style headings */
 .section-label {
-  font-family: monospace;
-  /* Or a handwritten font if available */
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
   display: block;
 }
 
-.text-neon-blue {
-  color: var(--neon-blue);
-}
-
-.text-neon-orange {
-  color: var(--neon-orange);
-}
-
-.text-neon-green {
-  color: var(--neon-green);
-}
-
-/* Background Doodle (Abstract lines) */
 .bg-doodle {
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 C 20 20, 40 20, 50 10' stroke='%23ffffff10' fill='none'/%3E%3C/svg%3E");
+  background-image: none;
 }
 
 @layer utilities {

@@ -40,23 +40,23 @@ export default function BlogContent({ post, relatedPosts }: BlogContentProps) {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-3 md:p-8">
+        <div className="max-w-4xl mx-auto p-4 md:p-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight tracking-tight">
+                {post.title}
+            </h1>
+            <p className="text-emerald-500 mb-10 font-semibold tracking-wider text-sm uppercase">
+                Publié le {formatDate(post.publishedAt)}
+            </p>
+
             {post.mainImage && (
-                <div className="mb-10 overflow-hidden rounded-sm border border-white/10 sketchy-box border-neon-blue">
+                <div className="mb-12 overflow-hidden rounded-2xl border border-white/5 shadow-xl">
                     <img
                         src={post.mainImage}
                         alt={post.title}
-                        className="w-full h-[400px] md:h-[500px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                        className="w-full h-[400px] md:h-[500px] object-cover"
                     />
                 </div>
             )}
-
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight font-handwritten">
-                {post.title}
-            </h1>
-            <p className="text-neon-blue mb-12 font-bold tracking-widest text-sm uppercase">
-                {formatDate(post.publishedAt)}
-            </p>
 
             <article className="prose prose-invert max-w-none prose-lg text-gray-300">
                 <PortableText
@@ -66,35 +66,37 @@ export default function BlogContent({ post, relatedPosts }: BlogContentProps) {
             </article>
 
             {post.author && (
-                <div className="flex items-center gap-4 mt-16 mb-16 p-6 rounded-sm bg-white/5 border border-white/10">
+                <div className="flex items-center gap-6 mt-16 mb-16 p-8 rounded-2xl bg-white/[0.02] border border-white/5">
                     {post.author.image?.asset?.url && (
-                        <div className="border border-white/20 rounded-full p-1 flex-shrink-0">
+                        <div className="border border-white/10 rounded-full p-1 flex-shrink-0 bg-background">
                             <Image
                                 src={post.author.image.asset.url}
                                 alt={post.author.name}
-                                width={70}
-                                height={70}
-                                className="w-[60px] h-[60px] object-cover rounded-full"
+                                width={80}
+                                height={80}
+                                className="w-[70px] h-[70px] object-cover rounded-full"
                             />
                         </div>
                     )}
                     <div className="flex flex-col justify-center">
-                        <p className="font-bold text-white text-lg">{post.author.name}</p>
-                        {post.author.bio && (
-                            <div className="text-gray-400 text-sm">
+                        <p className="font-bold text-white text-xl mb-1">{post.author.name}</p>
+                        {post.author.bio ? (
+                            <div className="text-gray-400 text-sm leading-relaxed max-w-2xl">
                                 <PortableText
                                     value={post.author.bio}
                                     components={portableTextComponents}
                                 />
                             </div>
+                        ) : (
+                            <p className="text-gray-400 text-sm">Auteur de l'article</p>
                         )}
                     </div>
                 </div>
             )}
 
             {relatedPosts.length > 0 && (
-                <section className="mt-20 pt-12 border-t border-white/10">
-                    <h2 className="text-3xl font-bold mb-10 text-center text-white font-handwritten transform -rotate-1">
+                <section className="mt-20 pt-16 border-t border-white/5">
+                    <h2 className="text-3xl font-bold mb-10 text-white tracking-tight">
                         Autres articles
                     </h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -102,27 +104,30 @@ export default function BlogContent({ post, relatedPosts }: BlogContentProps) {
                             <Link
                                 href={`/blog/${relatedPost.slug.current}`}
                                 key={relatedPost._id}
-                                className="group block sketchy-box p-4 bg-background/50 border-white/20 hover:border-neon-green transition-all"
-                                style={{ borderColor: 'rgba(255,255,255,0.2)' }}
+                                className="group block p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-emerald-500/30 hover:bg-white/[0.04] transition-all duration-300"
                             >
-                                {relatedPost.mainImage && (
-                                    <div className="relative h-48 w-full overflow-hidden mb-4 border-b border-white/10">
-                                        <div className="absolute inset-0 bg-neon-green/0 group-hover:bg-neon-green/10 transition-colors z-10 pointer-events-none" />
+                                {relatedPost.mainImage ? (
+                                    <div className="relative h-48 w-full overflow-hidden mb-4 rounded-lg bg-white/5">
+                                        <div className="absolute inset-0 bg-emerald-500/0 group-hover:bg-emerald-500/10 transition-colors z-10 pointer-events-none" />
                                         <img
                                             src={relatedPost.mainImage}
                                             alt={relatedPost.title}
-                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
+                                    </div>
+                                ) : (
+                                    <div className="h-48 w-full mb-4 rounded-lg bg-white/5 flex items-center justify-center">
+                                        <span className="text-gray-500 text-sm font-medium">Article</span>
                                     </div>
                                 )}
                                 <div className="p-2">
-                                    <h3 className="text-lg font-bold mb-2 line-clamp-2 text-white group-hover:text-neon-green transition-colors leading-tight">
-                                        {relatedPost.title}
-                                    </h3>
-                                    <p className="text-xs font-bold text-gray-500 mb-3 uppercase tracking-wide">
+                                    <p className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">
                                         {formatDate(relatedPost.publishedAt)}
                                     </p>
-                                    <p className="text-white text-sm font-bold group-hover:text-neon-green transition-colors inline-flex items-center">
+                                    <h3 className="text-lg font-bold mb-4 line-clamp-2 text-white group-hover:text-emerald-400 transition-colors leading-snug">
+                                        {relatedPost.title}
+                                    </h3>
+                                    <p className="text-gray-300 text-sm font-medium group-hover:text-emerald-400 transition-colors inline-flex items-center">
                                         Lire l'article <span className="ml-2">→</span>
                                     </p>
                                 </div>

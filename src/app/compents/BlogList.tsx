@@ -56,41 +56,41 @@ export default function BlogList({ isHome }: { isHome?: boolean }) {
     return (
         <section className="py-2">
             {!isHome && <AppBar fixed={true} logo="/logo.png" menuIcon="/icons/menu.png" />}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                 {/* Header Section */}
-                <div className="mb-12 md:text-left">
-                    <span className="font-handwritten text-neon-green text-xl md:text-2xl block mb-2 transform -rotate-2">Partage de connaissances</span>
+                <div className="mb-12 md:text-left text-center">
+                    <span className="text-emerald-500 font-semibold tracking-wider text-sm uppercase block mb-3">Partage de connaissances</span>
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-3xl font-bold text-white sm:text-4xl mb-6">
-                        Notre Blog
+                        className="text-3xl font-bold tracking-tight text-white md:text-5xl mb-6">
+                        Dernières Publications
                     </motion.h2>
                 </div>
 
-                {/* Loading State */}
+                {/* Loading / Error States */}
                 {isLoading ? (
                     <div className="flex justify-center items-center min-h-[200px]">
-                        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-neon-green"></div>
+                        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-emerald-500"></div>
                     </div>
                 ) : error ? (
                     <div className="text-center py-12">
-                        <p className="text-gray-400 mb-6 font-light">Une erreur est survenue lors du chargement des articles.</p>
+                        <p className="text-gray-400 mb-6 text-lg">{error}</p>
                         <button
                             onClick={() => {
                                 setError(null);
                                 setIsLoading(true);
                                 window.location.reload();
                             }}
-                            className="px-6 py-3 border border-white/20 text-white font-medium rounded-sm hover:bg-white/5 transition-colors"
+                            className="px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-colors"
                         >
                             Réessayer
                         </button>
                     </div>
                 ) : posts.length === 0 ? (
                     <div className="text-center py-12">
-                        <p className="text-gray-400 font-light">Aucun article disponible pour le moment.</p>
+                        <p className="text-gray-400 text-lg">Aucun article disponible pour le moment.</p>
                     </div>
                 ) : (
                     <motion.div
@@ -115,11 +115,11 @@ export default function BlogList({ isHome }: { isHome?: boolean }) {
                     >
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="inline-flex items-center px-8 py-3 bg-transparent text-neon-green font-bold text-lg border-2 border-neon-green rounded-sm hover:bg-neon-green hover:text-black transition-colors transform hover:rotate-1"
+                            className="inline-flex items-center px-8 py-3.5 bg-white/5 text-white font-semibold border border-white/10 rounded-lg hover:bg-white/10 transition-colors shadow-sm"
                         >
                             <span>{showAll ? "Voir moins d'articles" : "Charger plus d'articles"}</span>
                             <svg
-                                className={`w-4 h-4 ml-2 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
+                                className={`w-5 h-5 ml-2 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"

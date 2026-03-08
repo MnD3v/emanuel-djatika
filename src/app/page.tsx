@@ -1,16 +1,50 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MonitorPlay, Smartphone, Server, ExternalLink, Github, Mail, Linkedin } from "lucide-react";
+import { MonitorPlay, Smartphone, Server, ExternalLink, Github, Mail, Linkedin, Briefcase, Phone, GraduationCap } from "lucide-react";
 import Technologies from "./compents/technologies";
 
 const projets = [
   {
-    image: "eboite.png",
-    link: "https://eboite.co/",
+    image: "eboite1.png",
+    link: "https://eboite.net/",
     title: "La BAN",
     description: "Plateforme moderne de gestion d'avis numériques pour les entreprises africaines.",
     type: "Site web",
     tech: ["Next.js", "TypeScript", "Supabase"]
+  },
+
+
+  {
+    image: "ardoiz.png",
+    link: "https://play.google.com/store/apps/details?id=com.equilibre.q_dclic&hl=fr",
+    title: "Ardoiz",
+    description: "Application mobile de suivi étudiant intégrant la vérification des présences et des quiz interactifs.",
+    type: "Application mobile",
+    tech: ["Flutter", "Firebase", "Dart"]
+  },
+  {
+    image: "eglix.png",
+    link: "ix-app.lafia.tech",
+    title: "Eglix",
+    description: "Plateforme web dédiée à la gestion centralisée des membres, des dîmes et des offrandes.",
+    type: "Application web",
+    tech: ["Next.js", "TypeScript", "Node.js"]
+  },
+  {
+    image: "immomanager.png",
+    link: "https://panpas-immo.netlify.app/",
+    title: "Immomanager",
+    description: "Application web performante pour la gestion optimisée des biens immobiliers, des locataires et des loyers.",
+    type: "Application web",
+    tech: ["React", "TailwindCSS", "Node.js"]
+  },
+  {
+    image: "moger.png",
+    link: "https://play.google.com/store/apps/details?id=com.equilibre.maclef&hl=fr",
+    title: "Moger",
+    description: "Application mobile immobilière complète pour simplifier la gestion de biens.",
+    type: "Application mobile",
+    tech: ["Flutter", "Firebase", "Dart"]
   },
   {
     image: "cemena.png",
@@ -20,22 +54,6 @@ const projets = [
     type: "Site web",
     tech: ["React", "TailwindCSS", "CMS"]
   },
-  {
-    image: "orphelinat.png",
-    link: "https://yendoube.vercel.app/",
-    title: "Orphelinat Yendoubé",
-    description: "Plateforme de soutien humanitaire pour favoriser la solidarité et les dons.",
-    type: "Site web",
-    tech: ["Next.js", "Sanity", "Framer Motion"]
-  },
-  {
-    image: "moger.png",
-    link: "https://play.google.com/store/apps/details?id=com.equilibre.moger",
-    title: "Moger",
-    description: "Application mobile immobilière complète pour simplifier la gestion de biens.",
-    type: "Application mobile",
-    tech: ["Flutter", "Firebase", "Dart"]
-  }
 ];
 
 export default function Home() {
@@ -71,7 +89,7 @@ export default function Home() {
               </p>
             </div>
             <h2 className="text-4xl md:text-[56px] font-bold mb-10 md:mb-12 tracking-tight leading-[1.1]">
-              Développeur Logiciel
+              Développeur Full Stack
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <Link href="#contacts" className="inline-flex justify-center items-center bg-[#fd645b] hover:bg-[#e45a52] text-white px-8 md:px-10 py-3.5 md:py-4 rounded font-medium transition-all duration-300 shadow-[0_4px_20px_rgba(253,100,91,0.25)] hover:shadow-[0_4px_25px_rgba(253,100,91,0.4)] hover:-translate-y-0.5 text-[15px] tracking-wide">
@@ -161,7 +179,7 @@ export default function Home() {
           <div className="flex flex-col justify-center order-1 md:order-2">
             <h2 className="text-4xl md:text-[44px] font-bold mb-8">À propos de moi</h2>
             <p className="text-[#A2ABB8] mb-12 leading-[1.8] text-[17px] font-light">
-              J'ai commencé mon parcours informatique avec la photographie. C'est de là qu'est née ma passion pour le processus de création de toutes pièces. Dès lors, cela m'a conduit vers le développement web car il me permet de satisfaire mon envie d'apprendre et de concevoir des solutions.
+              Titulaire d'une Licence en Mathématiques Appliquées à l'Informatique, je suis aujourd'hui Développeur Full Stack et Formateur avec plus de 5 ans d'expérience. Fortement impliqué, je conçois des solutions digitales de bout en bout (applications web et mobiles) et j'accompagne de jeunes talents dans la réalisation de leurs projets numériques.
             </p>
 
             {/* Stats */}
@@ -175,8 +193,72 @@ export default function Home() {
                 <div className="text-[11px] md:text-xs text-[#5A6376] uppercase tracking-[0.15em] font-semibold leading-relaxed">Satisfaction<br />Clients</div>
               </div>
               <div className="w-[45%] md:w-auto text-left mt-4 md:mt-0">
-                <div className="text-3xl md:text-4xl font-bold flex items-center mb-3">10 <span className="text-[#fd645b] ml-1.5">+</span></div>
+                <div className="text-3xl md:text-4xl font-bold flex items-center mb-3">5 <span className="text-[#fd645b] ml-1.5">+</span></div>
                 <div className="text-[11px] md:text-xs text-[#5A6376] uppercase tracking-[0.15em] font-semibold leading-relaxed">Années<br />d'expérience</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Expériences & Parcours Section */}
+        <section id="experiences" className="py-24 relative">
+          <div className="text-center flex flex-col items-center mb-20">
+            <h2 className="text-4xl md:text-[44px] font-bold mb-12">Mon Parcours</h2>
+            <div className="flex flex-col items-center justify-center relative">
+              <div className="w-[2px] h-24 bg-gradient-to-b from-[#fd645b] to-transparent mb-4 rounded-full"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-[#fd645b] shadow-[0_0_15px_rgba(253,100,91,0.6)] absolute bottom-0"></div>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
+            {/* Experience Card 1 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#131821] group-hover:bg-[#fd645b] group-hover:border-[#fd645b] text-[#fd645b] group-hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(253,100,91,0.2)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <Briefcase size={18} />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#fd645b]/30 transition-colors duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                  <h3 className="font-bold text-xl text-white">Responsable Dev & Tuteur</h3>
+                  <span className="text-sm text-[#fd645b] bg-[#fd645b]/10 px-3 py-1 rounded-full w-fit whitespace-nowrap">2024 - Présent</span>
+                </div>
+                <p className="text-[#A2ABB8] text-sm mb-2 font-medium">Projet D-CLIC (OIF) / CUBE Incubateur</p>
+                <p className="text-gray-400 text-[15px] font-light leading-relaxed">
+                  Encadrement technique de l'équipe de développement. Formation et coaching de plus de 40 jeunes dans la conception d'applications web et mobiles.
+                </p>
+              </div>
+            </div>
+
+            {/* Experience Card 2 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#131821] group-hover:bg-[#fd645b] group-hover:border-[#fd645b] text-[#fd645b] group-hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(253,100,91,0.2)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <Briefcase size={18} />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#fd645b]/30 transition-colors duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                  <h3 className="font-bold text-xl text-white">Développeur Full Stack & Fondateur</h3>
+                  <span className="text-sm text-[#A2ABB8] bg-white/5 px-3 py-1 rounded-full w-fit whitespace-nowrap">2021 - Présent</span>
+                </div>
+                <p className="text-[#A2ABB8] text-sm mb-2 font-medium">eBoite & Moger Projets</p>
+                <p className="text-gray-400 text-[15px] font-light leading-relaxed">
+                  Conception de solutions web sur mesure (eBoite) et développement complet de Moger, une application immobilière innovante pour le marché africain.
+                </p>
+              </div>
+            </div>
+
+            {/* Experience Card 3 */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#131821] group-hover:bg-[#fd645b] group-hover:border-[#fd645b] text-[#fd645b] group-hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(253,100,91,0.2)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                <GraduationCap size={18} />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#fd645b]/30 transition-colors duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                  <h3 className="font-bold text-xl text-white">Licence Maths Appliquées & Certifications</h3>
+                  <span className="text-sm text-[#A2ABB8] bg-white/5 px-3 py-1 rounded-full w-fit whitespace-nowrap">2018 - 2023</span>
+                </div>
+                <p className="text-[#A2ABB8] text-sm mb-2 font-medium">Université de Kara / Udemy / KEKAR</p>
+                <p className="text-gray-400 text-[15px] font-light leading-relaxed">
+                  Diplômé en Mathématiques Appliquées à l'Informatique. Certifié en Flutter/Dart (Mobile) et Laravel (Web) via des formations complètes.
+                </p>
               </div>
             </div>
           </div>
@@ -202,7 +284,7 @@ export default function Home() {
                 className={`group flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16`}
               >
                 {/* Image Container (Elegant presentation) */}
-                <div className="w-full md:w-3/5 h-[300px] md:h-[450px] relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                <div className="w-full md:w-3/5 aspect-[16/9] relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                   <div className="absolute inset-0 bg-[#fd645b]/10 group-hover:bg-transparent transition-colors z-10 duration-700" />
 
                   {/* Subtle inner shadow overlay */}
@@ -211,8 +293,8 @@ export default function Home() {
                   <Image
                     src={`/projets/${projet.image}`}
                     alt={projet.title}
-                    width={800}
-                    height={500}
+                    width={1600}
+                    height={900}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out filter grayscale-[0.3] group-hover:grayscale-0"
                   />
 
@@ -261,9 +343,14 @@ export default function Home() {
               <p className="text-[#A2ABB8] text-[17px] font-light leading-relaxed max-w-md mb-8">
                 Que vous ayez un projet en tête ou que vous souhaitiez simplement dire bonjour, n'hésitez pas à me contacter. Mon inbox est toujours ouverte!
               </p>
-              <a href="mailto:contact@exemple.com" className="inline-flex items-center gap-3 text-white hover:text-[#fd645b] transition-colors text-lg font-medium">
-                <Mail size={24} /> contact@exemple.com
-              </a>
+              <div className="flex flex-col gap-4">
+                <a href="mailto:em.djatika@gmail.com" className="inline-flex items-center gap-3 text-white hover:text-[#fd645b] transition-colors text-lg font-medium w-fit">
+                  <Mail size={24} /> em.djatika@gmail.com
+                </a>
+                <a href="tel:+22898784589" className="inline-flex items-center gap-3 text-white hover:text-[#fd645b] transition-colors text-lg font-medium w-fit">
+                  <Phone size={24} /> +228 98 78 45 89
+                </a>
+              </div>
             </div>
             <div className="flex md:justify-end items-end space-x-6">
               <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-[#fd645b] hover:border-[#fd645b] transition-all hover:-translate-y-1 shadow-lg">

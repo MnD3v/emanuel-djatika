@@ -24,7 +24,7 @@ const projets = [
   },
   {
     image: "eglix.png",
-    link: "ix-app.lafia.tech",
+    link: "https://eglix-app.lafia.tech",
     title: "Eglix",
     description: "Plateforme web dédiée à la gestion centralisée des membres, des dîmes et des offrandes.",
     type: "Application web",

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const sora = Sora({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-sora", // kept the generic variable name for compatibility with globals.css
   display: "swap",
 });
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
       </head>
       <body
-        className={`${sora.variable} font-sans antialiased bg-background text-foreground`}
+        className={`${plusJakartaSans.variable} font-sans antialiased bg-background text-foreground`}
       >
         <Providers>
           <div className="min-h-screen flex flex-col">

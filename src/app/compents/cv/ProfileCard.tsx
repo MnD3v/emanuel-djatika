@@ -6,12 +6,12 @@ export default function ProfileCard() {
   return (
     <div className="card sticky top-10 flex flex-col items-center p-8 w-full max-w-[380px] mx-auto text-center gap-6">
       {/* Avatar */}
-      <div className="relative w-64 h-64 rounded-3xl overflow-hidden mb-2">
+      <div className="relative w-64 h-[320px] rounded-3xl overflow-hidden mb-2">
         <Image
           src="/emanuel.jpeg"
           alt="Emanuel Djatika"
           fill
-          className="object-cover"
+          className="object-cover object-top"
         />
       </div>
 
